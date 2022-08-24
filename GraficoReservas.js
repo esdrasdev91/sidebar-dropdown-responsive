@@ -1,248 +1,70 @@
-// FUNCIONANDO =====================================
 
-//     <!-- <section class="GraficoReservas.js"> -->
-//     <div class="GraficoReservas.js">
-//       <canvas id="myChart"></canvas>
-//     </div>
-
-//     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+//   <!-- <section>
+//   <div>
+//     <canvas class="myChart"></canvas>
 
 //     <script>
 
-//       const ctx = document.getElementById('myChart').getContext("2d")
+//       var ctx = document.getElementsByClassName("myChart");
 
-//       const gradient = ctx.createLinearGradient(0, 0, 150, 400)
-//       gradient.addColorStop(0, '#4680ff')
-//       gradient.addColorStop(1, '#66ff')
-
-//       const labels = [
-//         'January',
-//         'February',
-//         'March',
-//         'April',
-//         'May',
-//         'June',
-//         'July',
-//         'August',
-//         'September',
-//         'October',
-//         'November',
-//         'December'
-//       ];
-
-//       const data = {
-//         labels: labels,
-//         datasets: [{
-//           label: 'Embarcadas',
-//           data: [211, 298, 189, 455, 312, 423, 498, 388, 433, 521, 611, 481, 523, 655],
-//           borderWidth: 6,
-//           borderColor: 'rgba(77,166,253,0.85)',
-//           backgroundColor: gradient,
-//           fill: true
-//         }
-
-//           // datasets: [{
-//           //   label: 'Reservas',
-//           //   data: [211, 298, 189, 455, 312, 423, 498, 388, 433, 521, 611, 481, 523, 655],
-//           //   borderWidth: 6,
-//           //   borderColor: 'rgba(77,166,253,0.85)',
-//           //   backgroundColor: gradient,
-//           //   fill: true
-//           // }
-
-//         ]
-//       };
-
-
-//       const config = {
+//       var charGraph = new Chart(ctx, {
 //         type: 'line',
-//         data: data,
-//         options: {
-//           responsive: true
-//         }
-//       };
+//         data: {
+//           labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+//           datasets: [
+//             {
+//               label: "Aprovadas",
+//               data: [111, 269, 355, 312, 398, 388, 433, 521, 611, 523, 655],
+//               borderWidth: 6,
+//               borderColor: 'rgba(255,215,0)',
+//               backgroundColor: 'transparent'
 
+//             },
+//             {
+//               label: "Canceladas",
+//               data: [455, 439, 415, 512, 328, 458, 503, 411, 302, 403, 425],
+//               borderWidth: 6,
+//               borderColor: 'rgba(017,126,253,0.85)',
+//               backgroundColor: 'transparent'
+//             },
+//             {
+//               label: "Embarcadas",
+//               data: [355, 339, 315, 212, 128, 158, 203, 311, 402, 303, 325],
+//               borderWidth: 6,
+//               borderColor: 'rgba(77,166,23,0.85)',
+//               backgroundColor: 'transparent'
+//             },
+//             {
+//               label: "Faturadas",
+//               data: [244, 239, 215, 312, 288, 358, 203, 211, 202, 203, 125],
+//               borderWidth: 6,
+//               borderColor: 'rgba(255,127,80)',
+//               backgroundColor: 'transparent'
+
+//               // backgroundColor: 'rgba(240,255,255)'
+//               // fill: true
+//             },
+//           ]
+//         },
+
+//         options: {
+//           title: {
+//             display: true,
+//             fontSize: 30,
+//             text: "AGêNCIA WEB"
+//           },
+//           label: {
+//             fontStyle: "bold"
+//           },
+//           responsive: true,
+//           radius: 3,
+//           hoverRadius: 15,
+//         }
+
+//       });
 
 //     </script>
 
-//     <script>
-//       const myChart = new Chart(
-//         document.getElementById('myChart'),
-//         config
-//       );
-//     </script>
 
-//   </section>
-
-
-// ======================================================
-// const labels = [
-//   'January',
-//   'February',
-//   'March',
-//   'April',
-//   'May',
-//   'June',
-// ];
-
-// const data = {
-//   labels: labels,
-//   datasets: [{
-//     label: 'My First dataset',
-//     backgroundColor: 'rgb(255, 99, 132)',
-//     borderColor: 'rgb(255, 99, 132)',
-//     data: [0, 10, 5, 2, 20, 30, 45],
-//   }]
-// };
-
-// const config = {
-//   type: 'line',
-//   data: data,
-//   options: {}
-// };
-
-// const myChart = new Chart(
-//     document.getElementById('myChart'),
-//     config
-//   );
-
-
-// *=---------------------------------------------------------------------*//
-// const ctx = document.getElementById('myChart').getContext("2d")
-
-// const gradient = ctx.createLinearGradient(0, 0, 150, 400)
-// gradient.addColorStop(0, '#4680ff')
-// gradient.addColorStop(1, '#66ff')
-
-// const labels = [
-//     'January',
-//     'February',
-//     'March',
-//     'April',
-//     'May',
-//     'June',
-//     'July',
-//     'August',
-//     'September',
-//     'October',
-//     'November',
-//     'December'
-// ];
-
-// const data = {
-//     labels: labels,
-//     datasets: [{
-//         label: 'Embarcadas',
-//         data: [211, 298, 189, 455, 312, 423, 498, 388, 433, 521, 611, 481, 523, 655],
-//         borderWidth: 6,
-//         borderColor: 'rgba(77,166,253,0.85)',
-//         backgroundColor: gradient,
-//         fill: true
-//     }
-//   ]
-// };
-
-// const config = {
-//     type: 'line',
-//     data: data,
-//     // options: {
-//     //     responsive: true
-//     // }
-// };
-
-// const myChart = new Chart(
-//     document.getElementById('myChart'),
-//     config
-//   );
-
-
-
-
-// const labels = [
-
-//     '2012',
-//     '2013',
-//     '2014',
-//     '2015',
-//     '2016',
-//     '2017',
-//     '2018',
-//     '2019',
-//     '2020',
-//     '2021',
-//     '2022'
-// ]
-
-// const data = {
-//     labels: ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
-//     datasets: [{
-//         data: [211, 298, 189, 259, 312, 423, 498, 388, 433],
-//         label: 'Reservas',
-//         fill: true,
-//         backgroundColor: gradient
-//     }]
-// }
-
-// const config = (ctx, {
-//         type: 'line',
-//         data: {
-//             labels: ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
-//             datasets: [{
-//                 data: [211, 298, 189, 259, 312, 423, 498, 388, 433],
-//                 label: 'Reservas',
-//                 // fill: true,
-//                 backgroundColor: gradient
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             radius: 4,
-//             hoverRadius: 10,
-//             scales: {
-//                 y: {
-//                     // stacked: true
-//                     ticks: {
-//                         callback: function (value) {
-//                             let finalValue = value.tofixed(2)
-//                             return 'R$' + finalValue.replace('.', ',') + ' mil'
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     });
-
-//     var myChart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"],
-//             datasets: [{
-//                 data: [211, 298, 189, 259, 312, 423, 498, 388, 433],
-//                 label: 'Reservas',
-//                 // fill: true,
-//                 // backgroundColor: gradient
-//                 borderWidth: 6,
-//                 borderColor: 'rgba(77,166,253,0.85)',
-//                 backgroundColor: 'transparent',
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             radius: 4,
-//             hoverRadius: 10,
-//             scales: {
-//                 y: {
-//                     // stacked: true
-//                     ticks: {
-//                         callback: function (value) {
-//                             let finalValue = value.tofixed(2)
-//                             return 'R$' + finalValue.replace('.', ',') + ' mil'
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     });
-
-
-// });
+//   </div>
+// </section> -->
