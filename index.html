@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
-  <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
   <link rel="stylesheet" href="style.css">
-  <!-- Boxiocns CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
 
-  <!-- <script src=""></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -20,7 +16,6 @@
   <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bx-code-alt' style='color:#1d1b31;'></i>
-      <!-- <i class='bx bxl-c-plus-plus'></i> -->
       <span class="logo_name">Index Developer</span>
     </div>
     <ul class="nav-links">
@@ -140,55 +135,161 @@
 
 
   <section class="home-section">
+
     <div class="home-content">
       <i class='bx bx-home'></i>
       <span class="text">Seu site aqui</span>
     </div>
-  </section>
 
-  <section class="GraficoReservas.js">
-    <div class="GraficoReservas.js">
-      <canvas id="myChart"></canvas>
+    <div>
+      <canvas class="myChart"></canvas>
+      <script>
+        var ctx = document.getElementsByClassName("myChart");
+
+        var charGraph = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+            datasets: [
+              {
+                label: "Aprovadas",
+                data: [111, 269, 355, 312, 398, 388, 433, 521, 611, 523, 655, 555],
+                borderWidth: 6,
+                borderColor: 'rgba(255,215,0)',
+                backgroundColor: 'transparent'
+              },
+              {
+                label: "Canceladas",
+                data: [455, 439, 415, 512, 328, 458, 503, 411, 302, 403, 425, 433],
+                borderWidth: 6,
+                borderColor: 'rgba(017,126,253,0.85)',
+                backgroundColor: 'transparent'
+              },
+              {
+                label: "Embarcadas",
+                data: [355, 339, 315, 212, 128, 158, 203, 311, 402, 303, 325, 288],
+                borderWidth: 6,
+                borderColor: 'rgba(77,166,23,0.85)',
+                backgroundColor: 'transparent'
+              },
+              {
+                label: "Faturadas",
+                data: [244, 239, 215, 312, 288, 358, 203, 211, 202, 203, 125, 255],
+                borderWidth: 6,
+                borderColor: 'rgba(255,127,80)',
+                backgroundColor: 'transparent'
+
+                // backgroundColor: 'rgba(240,255,255)'
+                // fill: true
+              },
+            ]
+          },
+
+          options: {
+            plugins: {
+              title: {
+                display: true,
+                fontSize: 50,
+                text: "AGENCIA WEB",
+                padding: {
+                  top: 20,
+                  bottom: 20,
+                }
+              },
+              subtitle: {
+                display: true,
+                text: 'Relatório gerencial',
+                padding: {
+                  top: 10,
+                  bottom: 10,
+                }
+            },
+            },
+            labels: {
+              fontStyle: "bold",
+              fontSize: 20
+            },
+            responsive: true,
+            radius: 3,
+            hoverRadius: 15,
+          }
+        });
+      </script>
+
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script>
-      const labels = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-      ];
-
-      const data = {
-        labels: labels,
-        datasets: [{
-          label: 'My First dataset',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-      };
-
-      const config = {
-        type: 'line',
-        data: data,
-        options: {}
-      };
-    </script>
-
-    <script>
-      const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-      );
-    </script>
-
   </section>
-  
+
+  <!-- <section>
+    <div>
+      <canvas class="myChart"></canvas>
+
+      <script>
+
+        var ctx = document.getElementsByClassName("myChart");
+
+        var charGraph = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            datasets: [
+              {
+                label: "Aprovadas",
+                data: [111, 269, 355, 312, 398, 388, 433, 521, 611, 523, 655],
+                borderWidth: 6,
+                borderColor: 'rgba(255,215,0)',
+                backgroundColor: 'transparent'
+
+              },
+              {
+                label: "Canceladas",
+                data: [455, 439, 415, 512, 328, 458, 503, 411, 302, 403, 425],
+                borderWidth: 6,
+                borderColor: 'rgba(017,126,253,0.85)',
+                backgroundColor: 'transparent'
+              },
+              {
+                label: "Embarcadas",
+                data: [355, 339, 315, 212, 128, 158, 203, 311, 402, 303, 325],
+                borderWidth: 6,
+                borderColor: 'rgba(77,166,23,0.85)',
+                backgroundColor: 'transparent'
+              },
+              {
+                label: "Faturadas",
+                data: [244, 239, 215, 312, 288, 358, 203, 211, 202, 203, 125],
+                borderWidth: 6,
+                borderColor: 'rgba(255,127,80)',
+                backgroundColor: 'transparent'
+
+                // backgroundColor: 'rgba(240,255,255)'
+                // fill: true
+              },
+            ]
+          },
+
+          options: {
+            title: {
+              display: true,
+              fontSize: 30,
+              text: "AGêNCIA WEB"
+            },
+            label: {
+              fontStyle: "bold"
+            },
+            responsive: true,
+            radius: 3,
+            hoverRadius: 15,
+          }
+
+        });
+
+      </script>
+
+
+    </div>
+  </section> -->
+
+
   <script>
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {
@@ -205,6 +306,6 @@
     });
   </script>
 
-  </script>
 </body>
+
 </html>
